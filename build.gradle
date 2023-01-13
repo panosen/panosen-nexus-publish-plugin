@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'com.gradle.plugin-publish' version '1.1.0'
+}
+
+group 'com.panosen'
+version '0.0.1'
+
+gradlePlugin {
+    website = 'https://github.com/panosen/panosen-nexus-publish-plugin'
+    vcsUrl = 'https://github.com/panosen/panosen-nexus-publish-plugin'
+    plugins {
+        nexusPublishPlugin {
+            id = 'com.panosen.panosen-nexus-publish-plugin'
+            displayName = 'Panosen Nexus Publish Plugin'
+            description = 'panosen nexus publish plugin'
+            tags.set(['nexus', 'sonatype'])
+            implementationClass = 'com.panosen.NexusPublishPlugin'
+        }
+    }
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
