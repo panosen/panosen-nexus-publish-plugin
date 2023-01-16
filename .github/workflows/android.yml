@@ -2,9 +2,9 @@ name: Gradle CI
 
 on:
   push:
-    branches: [ "master", develop ]
+    branches: [ "this_yml_is_disabled" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "this_yml_is_disabled" ]
 
 jobs:
   build:
